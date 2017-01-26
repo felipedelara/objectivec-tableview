@@ -7,28 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E40F6D9E1E3A31FB00FD304B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E40F6D9D1E3A31FB00FD304B /* User.m */; };
 		E4BEA8381E37AC3B00848194 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BEA8371E37AC3B00848194 /* main.m */; };
 		E4BEA83B1E37AC3B00848194 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BEA83A1E37AC3B00848194 /* AppDelegate.m */; };
-		E4BEA83E1E37AC3B00848194 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BEA83D1E37AC3B00848194 /* ViewController.m */; };
 		E4BEA8411E37AC3B00848194 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4BEA83F1E37AC3B00848194 /* Main.storyboard */; };
 		E4BEA8431E37AC3B00848194 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4BEA8421E37AC3B00848194 /* Assets.xcassets */; };
 		E4BEA8461E37AC3B00848194 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4BEA8441E37AC3B00848194 /* LaunchScreen.storyboard */; };
 		E4BEA8501E37C6A400848194 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BEA84F1E37C6A400848194 /* APIManager.m */; };
+		E4DD8A321E392BF1004E62C6 /* profile-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E4DD8A311E392BF1004E62C6 /* profile-icon.png */; };
+		E4DD8A361E39325A004E62C6 /* EmployeeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DD8A351E39325A004E62C6 /* EmployeeTableViewController.m */; };
+		F1992197E9AC46927C000C75 /* libPods-Challenge-TableView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D67003CE27AA4CE36201987 /* libPods-Challenge-TableView.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FAE98C622643B94587EADB6 /* Pods-Challenge-TableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge-TableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-Challenge-TableView/Pods-Challenge-TableView.release.xcconfig"; sourceTree = "<group>"; };
+		6E26A1194320A0EF4594310D /* Pods-Challenge-TableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge-TableView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Challenge-TableView/Pods-Challenge-TableView.debug.xcconfig"; sourceTree = "<group>"; };
+		7D67003CE27AA4CE36201987 /* libPods-Challenge-TableView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Challenge-TableView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E40F6D9C1E3A31FB00FD304B /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		E40F6D9D1E3A31FB00FD304B /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		E4BEA8331E37AC3B00848194 /* Challenge-TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Challenge-TableView.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4BEA8371E37AC3B00848194 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E4BEA8391E37AC3B00848194 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E4BEA83A1E37AC3B00848194 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E4BEA83C1E37AC3B00848194 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E4BEA83D1E37AC3B00848194 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E4BEA8401E37AC3B00848194 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E4BEA8421E37AC3B00848194 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4BEA8451E37AC3B00848194 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4BEA8471E37AC3B00848194 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4BEA84E1E37C6A400848194 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
 		E4BEA84F1E37C6A400848194 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
+		E4DD8A311E392BF1004E62C6 /* profile-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile-icon.png"; sourceTree = "<group>"; };
+		E4DD8A341E39325A004E62C6 /* EmployeeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmployeeTableViewController.h; sourceTree = "<group>"; };
+		E4DD8A351E39325A004E62C6 /* EmployeeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmployeeTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +45,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1992197E9AC46927C000C75 /* libPods-Challenge-TableView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B6F04862FDFBA7ACD192243 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E26A1194320A0EF4594310D /* Pods-Challenge-TableView.debug.xcconfig */,
+				0FAE98C622643B94587EADB6 /* Pods-Challenge-TableView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6B7F7756D777AF5362F63F97 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D67003CE27AA4CE36201987 /* libPods-Challenge-TableView.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E40F6D9B1E3A31C700FD304B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E40F6D9C1E3A31FB00FD304B /* User.h */,
+				E40F6D9D1E3A31FB00FD304B /* User.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		E4BEA82A1E37AC3A00848194 = {
 			isa = PBXGroup;
 			children = (
 				E4BEA8351E37AC3B00848194 /* Challenge-TableView */,
 				E4BEA8341E37AC3B00848194 /* Products */,
+				2B6F04862FDFBA7ACD192243 /* Pods */,
+				6B7F7756D777AF5362F63F97 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,11 +99,12 @@
 		E4BEA8351E37AC3B00848194 /* Challenge-TableView */ = {
 			isa = PBXGroup;
 			children = (
+				E40F6D9B1E3A31C700FD304B /* Model */,
+				E4DD8A331E393223004E62C6 /* Controllers */,
+				E4DD8A301E392BE1004E62C6 /* ImageAssets */,
 				E4BEA84D1E37C66100848194 /* API Manager */,
 				E4BEA8391E37AC3B00848194 /* AppDelegate.h */,
 				E4BEA83A1E37AC3B00848194 /* AppDelegate.m */,
-				E4BEA83C1E37AC3B00848194 /* ViewController.h */,
-				E4BEA83D1E37AC3B00848194 /* ViewController.m */,
 				E4BEA83F1E37AC3B00848194 /* Main.storyboard */,
 				E4BEA8421E37AC3B00848194 /* Assets.xcassets */,
 				E4BEA8441E37AC3B00848194 /* LaunchScreen.storyboard */,
@@ -92,6 +131,23 @@
 			name = "API Manager";
 			sourceTree = "<group>";
 		};
+		E4DD8A301E392BE1004E62C6 /* ImageAssets */ = {
+			isa = PBXGroup;
+			children = (
+				E4DD8A311E392BF1004E62C6 /* profile-icon.png */,
+			);
+			name = ImageAssets;
+			sourceTree = "<group>";
+		};
+		E4DD8A331E393223004E62C6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E4DD8A341E39325A004E62C6 /* EmployeeTableViewController.h */,
+				E4DD8A351E39325A004E62C6 /* EmployeeTableViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,9 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E4BEA84A1E37AC3B00848194 /* Build configuration list for PBXNativeTarget "Challenge-TableView" */;
 			buildPhases = (
+				C75A59F952BB6DA3A2948739 /* [CP] Check Pods Manifest.lock */,
 				E4BEA82F1E37AC3A00848194 /* Sources */,
 				E4BEA8301E37AC3A00848194 /* Frameworks */,
 				E4BEA8311E37AC3A00848194 /* Resources */,
+				53171985978FC685AB095720 /* [CP] Embed Pods Frameworks */,
+				25C9104E01FE3AB0812BF39C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -153,21 +212,71 @@
 			files = (
 				E4BEA8461E37AC3B00848194 /* LaunchScreen.storyboard in Resources */,
 				E4BEA8431E37AC3B00848194 /* Assets.xcassets in Resources */,
+				E4DD8A321E392BF1004E62C6 /* profile-icon.png in Resources */,
 				E4BEA8411E37AC3B00848194 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		25C9104E01FE3AB0812BF39C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Challenge-TableView/Pods-Challenge-TableView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53171985978FC685AB095720 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Challenge-TableView/Pods-Challenge-TableView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C75A59F952BB6DA3A2948739 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E4BEA82F1E37AC3A00848194 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E40F6D9E1E3A31FB00FD304B /* User.m in Sources */,
 				E4BEA8501E37C6A400848194 /* APIManager.m in Sources */,
-				E4BEA83E1E37AC3B00848194 /* ViewController.m in Sources */,
 				E4BEA83B1E37AC3B00848194 /* AppDelegate.m in Sources */,
 				E4BEA8381E37AC3B00848194 /* main.m in Sources */,
+				E4DD8A361E39325A004E62C6 /* EmployeeTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +392,7 @@
 		};
 		E4BEA84B1E37AC3B00848194 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E26A1194320A0EF4594310D /* Pods-Challenge-TableView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TQ57BUPEGC;
@@ -295,6 +405,7 @@
 		};
 		E4BEA84C1E37AC3B00848194 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FAE98C622643B94587EADB6 /* Pods-Challenge-TableView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TQ57BUPEGC;
@@ -324,6 +435,7 @@
 				E4BEA84C1E37AC3B00848194 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
