@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EmployeeTableViewController : UITableViewController
+@interface UserTableViewController : UITableViewController
 
+@property NSMutableArray *userArray;
+
+- (void) reload;
 @end

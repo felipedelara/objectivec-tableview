@@ -11,6 +11,6 @@
 @interface APIManager : NSObject
 
 + (NSMutableArray *)createModelArrayFromJSON:(NSMutableDictionary *) itemsDictionary;
-+ (void) RetrieveContentFromWeb;
++ (void) RetrieveContentFromWeb:(void (^)(void))completionBlock;
 
 @end

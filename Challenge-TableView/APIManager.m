@@ -8,8 +8,8 @@
 
 #import "APIManager.h"
 #import <Foundation/Foundation.h>
-#import "JSONModel.h"
 #import "User.h"
+#import "UsersSingleton.h"
 
 @implementation APIManager
 
@@ -42,7 +42,7 @@
     return userArray;
 }
 
-+ (void) RetrieveContentFromWeb{
++ (void) RetrieveContentFromWeb:(void (^)(void))completionBlock{
     
     NSDictionary *headers = @{ @"cache-control": @"no-cache",
                                @"postman-token": @"cd1a96f4-dc3d-adda-0bed-a3cadf0120b6" };
@@ -74,6 +74,8 @@
             NSMutableArray *users = [self createModelArrayFromJSON:arrayForKey];
             NSLog(@"Finished reading dictionary! User array count: %lu", (unsigned long)users.count);
 
+            [UsersSingleton sharedInstance].userArray = users;
+            completionBlock();
         }
                 }];
     [dataTask resume];
