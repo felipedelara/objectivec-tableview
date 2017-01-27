@@ -11,12 +11,14 @@
 
 @interface User : NSObject
 
-    @property NSString *user_id;
-    @property NSString *display_name;
-    @property NSString *age;
-    @property NSString *profile_image;
-    @property BadgeSet *badges;
+@property NSString *user_id;
+@property NSString *display_name;
+@property NSString *age;
+@property NSString *profile_image;
+@property BadgeSet *badges;
 
 -(id)initWithId:(NSString *)id_ withDisplayName:(NSString *)displayName_ withAge:(NSString *)age_ withProfileImage:(NSString *) profileImage_ withBadgeSet:(BadgeSet*) badges_;
+
+- (NSString *) getPathWithoutSpecialCharacters;
 
 @end

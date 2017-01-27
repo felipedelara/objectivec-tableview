@@ -24,4 +24,16 @@
     return self;
 }
 
+
+- (NSString *) getPathWithoutSpecialCharacters{
+    
+    NSString *result = [self.profile_image stringByReplacingOccurrencesOfString:@"/" withString:@""];
+    result = [result stringByReplacingOccurrencesOfString:@"." withString:@""];
+    result = [result stringByReplacingOccurrencesOfString:@"?" withString:@""];
+    result = [result stringByReplacingOccurrencesOfString:@":" withString:@""];
+    result = [result stringByReplacingOccurrencesOfString:@"=" withString:@""];
+
+    return result;
+}
+
 @end

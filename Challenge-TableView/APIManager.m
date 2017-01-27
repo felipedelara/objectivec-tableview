@@ -16,11 +16,6 @@
 
 + (NSMutableArray *) createModelArrayFromJSON:(NSMutableDictionary *) itemsDictionary{
     
-    
-    NSEnumerator * enumerator = [itemsDictionary objectEnumerator];
-    
-    NSDictionary * item = [enumerator nextObject];
-    
     NSMutableArray * userArray = [[NSMutableArray alloc] init];
     
     NSString *user_id;
@@ -33,8 +28,6 @@
     NSString *silverCount;
     NSString *bronzeCount;
     BadgeSet *badges;
-
-    
     
     for (NSMutableDictionary* userItem in itemsDictionary) {
         user_id = [NSString stringWithFormat:@"%@", [userItem objectForKey:@"user_id"]];
@@ -47,7 +40,6 @@
         goldCount = [NSString stringWithFormat:@"%@", [userItem valueForKeyPath:@"badge_counts.gold"]];
 
         badges = [[BadgeSet alloc] initWithGoldCount:goldCount withSilverCount:silverCount withBronzeCount:bronzeCount];
-
 
         newUser = [[User alloc] initWithId:user_id withDisplayName:display_name withAge:age withProfileImage:profile_image withBadgeSet:badges];
         
@@ -74,20 +66,13 @@
         if (error) {
             NSLog(@"%@", error);
         } else {
-            NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
-            NSLog(@"%@", httpResponse);
             NSDictionary *resultDictionary = [NSJSONSerialization JSONObjectWithData:data
                                                                      options:0
                                                                      error:NULL];
             
-            
-            NSEnumerator *resultEnumerator = [resultDictionary keyEnumerator];
-            id key;
-
             NSMutableDictionary* arrayForKey =[resultDictionary objectForKey:@"items"];
             
             NSMutableArray *users = [self createModelArrayFromJSON:arrayForKey];
-            NSLog(@"Finished reading dictionary! User array count: %lu", (unsigned long)users.count);
 
             [UsersSingleton sharedInstance].userArray = users;
             completionBlock();
@@ -95,8 +80,5 @@
                 }];
     [dataTask resume];
 }
-
-
-
 
 @end

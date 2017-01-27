@@ -15,5 +15,6 @@
 @property NSMutableArray *userArray;
 
 - (void) reload;
+- (NSManagedObjectContext *)managedObjectContext;
 
 @end
