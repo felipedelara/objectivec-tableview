@@ -73,13 +73,30 @@
     cell.silverCountLabel.text = [NSString stringWithFormat: @"🥈 %@",user.badges.silverCount];
     cell.bronzeCountLabel.text = [NSString stringWithFormat: @"🥉 %@",user.badges.bronzeCount];
     
-
-
-//    cell.textLabel.text = @"AAAAA";
-//    cell.imageView.image = [UIImage imageNamed:@"profile-icon.png"];
-    //cell.displayNameLabel.text = @"teste";
+    cell.profilePictureImageView.image = nil; // or cell.poster.image = [UIImage imageNamed:@"placeholder.png"];
+    
+    cell.imageLoadingIndicator.hidden = false;
+    [cell.imageLoadingIndicator startAnimating];
+    
+    NSURL *url = [NSURL URLWithString:user.profile_image];
+    
+    NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (data) {
+            UIImage *image = [UIImage imageWithData:data];
+            if (image) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    cell.profilePictureImageView.image = image;
+                    [cell.imageLoadingIndicator stopAnimating];
+                    cell.imageLoadingIndicator.hidden = true;
+                });
+            }
+        }
+    }];
+    [task resume];
+    
     return cell;
 }
+
 
 
 /*

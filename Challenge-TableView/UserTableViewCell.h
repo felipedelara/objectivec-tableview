@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *goldCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *silverCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *bronzeCountLabel;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *imageLoadingIndicator;
 
 @end
