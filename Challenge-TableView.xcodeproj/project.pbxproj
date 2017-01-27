@@ -16,6 +16,8 @@
 		E4BEA8501E37C6A400848194 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BEA84F1E37C6A400848194 /* APIManager.m */; };
 		E4CB45261E3A3C5E00BAD214 /* UsersSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CB45251E3A3C5E00BAD214 /* UsersSingleton.m */; };
 		E4CB45291E3A4ABD00BAD214 /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CB45281E3A4ABD00BAD214 /* UserTableViewCell.m */; };
+		E4CB452B1E3ADBCB00BAD214 /* so-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E4CB452A1E3ADBCB00BAD214 /* so-icon.png */; };
+		E4CB452E1E3AECE000BAD214 /* Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CB452D1E3AECE000BAD214 /* Badge.m */; };
 		E4DD8A321E392BF1004E62C6 /* profile-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E4DD8A311E392BF1004E62C6 /* profile-icon.png */; };
 		E4DD8A361E39325A004E62C6 /* UserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DD8A351E39325A004E62C6 /* UserTableViewController.m */; };
 		F1992197E9AC46927C000C75 /* libPods-Challenge-TableView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D67003CE27AA4CE36201987 /* libPods-Challenge-TableView.a */; };
@@ -41,6 +43,9 @@
 		E4CB45251E3A3C5E00BAD214 /* UsersSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsersSingleton.m; sourceTree = "<group>"; };
 		E4CB45271E3A4ABD00BAD214 /* UserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewCell.h; sourceTree = "<group>"; };
 		E4CB45281E3A4ABD00BAD214 /* UserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewCell.m; sourceTree = "<group>"; };
+		E4CB452A1E3ADBCB00BAD214 /* so-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "so-icon.png"; sourceTree = "<group>"; };
+		E4CB452C1E3AECE000BAD214 /* BadgeSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeSet.h; sourceTree = "<group>"; };
+		E4CB452D1E3AECE000BAD214 /* Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Badge.m; sourceTree = "<group>"; };
 		E4DD8A311E392BF1004E62C6 /* profile-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile-icon.png"; sourceTree = "<group>"; };
 		E4DD8A341E39325A004E62C6 /* UserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewController.h; sourceTree = "<group>"; };
 		E4DD8A351E39325A004E62C6 /* UserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewController.m; sourceTree = "<group>"; };
@@ -84,6 +89,8 @@
 				E4CB45251E3A3C5E00BAD214 /* UsersSingleton.m */,
 				E4CB45271E3A4ABD00BAD214 /* UserTableViewCell.h */,
 				E4CB45281E3A4ABD00BAD214 /* UserTableViewCell.m */,
+				E4CB452C1E3AECE000BAD214 /* BadgeSet.h */,
+				E4CB452D1E3AECE000BAD214 /* Badge.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -115,10 +122,10 @@
 				E4BEA84D1E37C66100848194 /* API Manager */,
 				E4BEA8391E37AC3B00848194 /* AppDelegate.h */,
 				E4BEA83A1E37AC3B00848194 /* AppDelegate.m */,
-				E4BEA83F1E37AC3B00848194 /* Main.storyboard */,
 				E4BEA8421E37AC3B00848194 /* Assets.xcassets */,
 				E4BEA8441E37AC3B00848194 /* LaunchScreen.storyboard */,
 				E4BEA8471E37AC3B00848194 /* Info.plist */,
+				E4BEA83F1E37AC3B00848194 /* Main.storyboard */,
 				E4BEA8361E37AC3B00848194 /* Supporting Files */,
 			);
 			path = "Challenge-TableView";
@@ -144,6 +151,7 @@
 		E4DD8A301E392BE1004E62C6 /* ImageAssets */ = {
 			isa = PBXGroup;
 			children = (
+				E4CB452A1E3ADBCB00BAD214 /* so-icon.png */,
 				E4DD8A311E392BF1004E62C6 /* profile-icon.png */,
 			);
 			name = ImageAssets;
@@ -223,6 +231,7 @@
 				E4BEA8461E37AC3B00848194 /* LaunchScreen.storyboard in Resources */,
 				E4BEA8431E37AC3B00848194 /* Assets.xcassets in Resources */,
 				E4DD8A321E392BF1004E62C6 /* profile-icon.png in Resources */,
+				E4CB452B1E3ADBCB00BAD214 /* so-icon.png in Resources */,
 				E4BEA8411E37AC3B00848194 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +296,7 @@
 				E40F6D9E1E3A31FB00FD304B /* User.m in Sources */,
 				E4BEA8501E37C6A400848194 /* APIManager.m in Sources */,
 				E4BEA83B1E37AC3B00848194 /* AppDelegate.m in Sources */,
+				E4CB452E1E3AECE000BAD214 /* Badge.m in Sources */,
 				E4BEA8381E37AC3B00848194 /* main.m in Sources */,
 				E4DD8A361E39325A004E62C6 /* UserTableViewController.m in Sources */,
 			);

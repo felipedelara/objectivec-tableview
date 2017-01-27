@@ -10,6 +10,7 @@
 #import "APIManager.h"
 #import "UsersSingleton.h"
 #import "UserTableViewCell.h"
+#import "User.h"
 
 @interface UserTableViewController ()
 
@@ -17,8 +18,13 @@
 
 @implementation UserTableViewController
 
+@synthesize tableView = _tableView;
+
 - (void) reload{
     NSLog(@"Reload called with array count: %li",[UsersSingleton sharedInstance].userArray.count);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [_tableView reloadData];
+    });
 }
 
 
@@ -43,26 +49,38 @@
 }
 
 #pragma mark - Table view data source
-//
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//#warning Incomplete implementation, return the number of sections
-//    return 0;
-//}
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//#warning Incomplete implementation, return the number of rows
-//    return 3;
-//    //return [UsersSingleton sharedInstance].userArray.count;
-//}
-//
-//
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    UserTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UserTableViewCell" forIndexPath:indexPath];
-//    
-//    cell.displayNameLabel.text = @"teste";
-//    return cell;
-//}
-//
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+#warning Incomplete implementation, return the number of sections
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+#warning Incomplete implementation, return the number of rows
+    return [UsersSingleton sharedInstance].userArray.count;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    //UserTableViewCell *cell = [[UserTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UserCell"]; //= [tableView dequeueReusableCellWithIdentifier:@"UserCell" forIndexPath:indexPath];
+    
+    UserTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"UserCell" forIndexPath:indexPath];
+    
+    User *user = [[UsersSingleton sharedInstance].userArray objectAtIndex:indexPath.row];
+    cell.displayNameLabel.text = user.display_name;
+    
+    cell.goldCountLabel.text = [NSString stringWithFormat: @"🥇 %@",user.badges.goldCount];
+    cell.silverCountLabel.text = [NSString stringWithFormat: @"🥈 %@",user.badges.silverCount];
+    cell.bronzeCountLabel.text = [NSString stringWithFormat: @"🥉 %@",user.badges.bronzeCount];
+    
+
+
+//    cell.textLabel.text = @"AAAAA";
+//    cell.imageView.image = [UIImage imageNamed:@"profile-icon.png"];
+    //cell.displayNameLabel.text = @"teste";
+    return cell;
+}
+
 
 /*
 // Override to support conditional editing of the table view.

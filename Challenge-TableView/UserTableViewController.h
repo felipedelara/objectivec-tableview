@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UserTableViewController : UITableViewController
+@interface UserTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @property NSMutableArray *userArray;
 
 - (void) reload;
+
 @end

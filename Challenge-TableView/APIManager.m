@@ -9,6 +9,7 @@
 #import "APIManager.h"
 #import <Foundation/Foundation.h>
 #import "User.h"
+#import "BadgeSet.h"
 #import "UsersSingleton.h"
 
 @implementation APIManager
@@ -28,13 +29,27 @@
     NSString *profile_image;
     User *newUser;
     
+    NSString *goldCount;
+    NSString *silverCount;
+    NSString *bronzeCount;
+    BadgeSet *badges;
+
+    
+    
     for (NSMutableDictionary* userItem in itemsDictionary) {
         user_id = [NSString stringWithFormat:@"%@", [userItem objectForKey:@"user_id"]];
         display_name = [NSString stringWithFormat:@"%@", [userItem objectForKey:@"display_name"]];
         age = [NSString stringWithFormat:@"%@", [userItem objectForKey:@"age"]];
         profile_image = [NSString stringWithFormat:@"%@", [userItem objectForKey:@"profile_image"]];
+        
+        bronzeCount = [NSString stringWithFormat:@"%@", [userItem valueForKeyPath:@"badge_counts.bronze"]];
+        silverCount = [NSString stringWithFormat:@"%@", [userItem valueForKeyPath:@"badge_counts.silver"]];
+        goldCount = [NSString stringWithFormat:@"%@", [userItem valueForKeyPath:@"badge_counts.gold"]];
 
-        newUser = [[User alloc] initWithId:user_id withDisplayName:display_name withAge:age withProfileImage:profile_image];
+        badges = [[BadgeSet alloc] initWithGoldCount:goldCount withSilverCount:silverCount withBronzeCount:bronzeCount];
+
+
+        newUser = [[User alloc] initWithId:user_id withDisplayName:display_name withAge:age withProfileImage:profile_image withBadgeSet:badges];
         
         [userArray addObject:newUser];
     }

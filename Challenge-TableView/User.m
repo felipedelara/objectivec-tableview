@@ -7,10 +7,11 @@
 //
 
 #import "User.h"
+#import "BadgeSet.h"
 
 @implementation User
 
--(id)initWithId:(NSString *)id_ withDisplayName:(NSString *)displayName_ withAge:(NSString *)age_ withProfileImage:(NSString *) profileImage_ {
+-(id)initWithId:(NSString *)id_ withDisplayName:(NSString *)displayName_ withAge:(NSString *)age_ withProfileImage:(NSString *) profileImage_ withBadgeSet:(BadgeSet *) badges_{
 
     self = [super init];
     if (self) {
@@ -18,6 +19,7 @@
         self.display_name = displayName_;
         self.age = age_;
         self.profile_image = profileImage_;
+        self.badges = badges_;
     }
     return self;
 }
